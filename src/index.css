@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  --color-youtube-red: #FF0000;
+  --color-youtube-dark: #0F0F0F;
+  --color-card-bg: #FFFFFF;
+  --color-border: #E5E5E5;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F9F9F9] text-youtube-dark font-sans;
+  }
+}
+
+.glass-card {
+  @apply bg-white border border-border rounded-2xl shadow-sm;
+}
+
+.btn-primary {
+  @apply bg-youtube-red text-white font-bold py-3 px-6 rounded-full transition-all hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.input-field {
+  @apply w-full bg-white border border-border rounded-xl px-4 py-3 focus:ring-2 focus:ring-youtube-red focus:border-transparent outline-none transition-all;
+}
